@@ -1,10 +1,10 @@
-var count = document.getElementById("count");
-var text = document.getElementById("text");
+let count = document.getElementById("count");
+let text = document.getElementById("text");
 
 function counterText(textI) {
 	var textI = text.value.split(" ");
-	var word = 0;
-	for (var i = 0; i < textI.length; i++) {
+	let word = 0;
+	for (let i = 0; i < textI.length; i++) {
 		if (textI[i] !== " ") {
 			word++;
 		}
@@ -12,6 +12,6 @@ function counterText(textI) {
 	count.innerText = word;
 }
 
-text.addEventListener("keyup", function (e) {
+text.addEventListener("keyup", (e) => {
 	counterText(e.target.value);
 });
